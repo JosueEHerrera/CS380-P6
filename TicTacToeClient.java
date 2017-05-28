@@ -26,7 +26,7 @@ public class TicTacToeClient{
 			System.out.println("\nNew Game!\n");
 			out.writeObject(new CommandMessage(CommandMessage.Command.NEW_GAME));
 			Message message;
-		dance:	while(true){
+			while(true){
 				message = (Message)in.readObject();
 				switch(message.getType()){
 					case BOARD:
